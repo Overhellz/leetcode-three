@@ -79,7 +79,7 @@ https://leetcode.com/studyplan/leetcode-75/
 
 | Level  | Name                                                              | Link                                                                                       | Yandex | Freq % | TP150 | LC75 | Top100 | Retention |
 |:------:|:------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:------:|:------:|:-----:|:----:|:------:|:----------|
-|  Easy  | 1768. Merge Strings Alternately                                   | https://leetcode.com/problems/merge-strings-alternately/                                   |   —    |   —    |   —   |  ✅   |   —    |           |
+|  Easy  | 1768. Merge Strings Alternately                                   | https://leetcode.com/problems/merge-strings-alternately/                                   |   —    |   —    |   —   |  ✅   |   —    | 4         |
 |  Easy  | 1071. Greatest Common Divisor of Strings                          | https://leetcode.com/problems/greatest-common-divisor-of-strings/                          |   —    |   —    |   —   |  ✅   |   —    |           |
 |  Easy  | 1431. Kids With the Greatest Number of Candies                    | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/                    |   —    |   —    |   —   |  ✅   |   —    |           |
 |  Easy  | 605. Can Place Flowers                                            | https://leetcode.com/problems/can-place-flowers/                                           |   ✅    | 37.5%  |   —   |  ✅   |   —    |           |

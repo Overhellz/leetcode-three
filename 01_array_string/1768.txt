@@ -1,0 +1,30 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        if (word1 == null || word2 == null) {
+            return word1 == null ? word2 : word1;
+        }
+
+        int pos1 = 0;
+        int pos2 = 0;
+        
+        StringBuilder result = new StringBuilder();
+        
+        while (pos1 < word1.length() && pos2 < word2.length()) {
+            result.append(word1.charAt(pos1));
+            result.append(word2.charAt(pos2));
+            pos1++;
+            pos2++;
+        }
+
+        while (pos1 < word1.length()  ) {
+            result.append(word1.charAt(pos1));
+            pos1++;
+        }
+        while (pos2 < word2.length()  ) {
+            result.append(word2.charAt(pos2));
+            pos2++;
+        }
+
+        return result.toString();
+    }
+}
