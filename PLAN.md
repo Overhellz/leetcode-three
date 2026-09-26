@@ -1,11 +1,13 @@
 # План подготовки — минимум времени, каждую неделю
 
+> Вариант на 2 ч в неделю. Актуальный план при темпе 10–15 задач в неделю — [PLAN_10-15.md](PLAN_10-15.md).
+
 Старт: 2026-08-26. Ориентир следующего собеседования: 2027-05-26 (~39 недель).
 
 Формат: **одна сессия ~2 часа в неделю**, без ежедневного грайнда. Меньше сессий пропускать нельзя — регулярность важнее
 интенсивности на таком горизонте.
 Полные условия задач и колонки Yandex/TP150/LC75/Top100 —
-в [README.md](https://github.com/Overhellz/leetcode-next/blob/main/README.md), протокол решения задачи — в `PROTOCOL.md`
+в [README.md](README.md), протокол решения задачи — в `PROTOCOL.md`
 или в [тренажёре](https://claude.ai/code/artifact/cb139d57-f44b-423c-affd-6849609fe88b).
 ---
 
@@ -22,7 +24,7 @@
 |   4    | 2026-09-16 | Prefix Sum               | Щадящий · 30 мин     | [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/), [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/), [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/), [523. Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/), [974. Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)                                                                                                                    |  🎤  |
 |   5    | 2026-09-23 | Hash Map                 | Щадящий · 30 мин     | [1. Two Sum](https://leetcode.com/problems/two-sum/), [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/), [136. Single Number](https://leetcode.com/problems/single-number/), [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/), [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                                                                                                                                                                                                             |      |
 |   6    | 2026-09-30 | Stack, Queue             | Щадящий · 30 мин     | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/), [155. Min Stack](https://leetcode.com/problems/min-stack/), [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/), [71. Simplify Path](https://leetcode.com/problems/simplify-path/), [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)                                                                                                                                                                    |      |
-|   7    | 2026-10-07 | Monotonic Stack          | Щадящий · 30 мин     | [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/), [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/), [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/), [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)                                                                                                                                                                                                                           |      |
+|   7    | 2026-10-07 | Monotonic Stack          | Щадящий · 30 мин     | [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/), [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/), [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/), [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)                                                                                                                                                                                                                      |      |
 |   8    | 2026-10-14 | Binary Search            | Щадящий · 30 мин     | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/), [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/), [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/), [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)                                                              |  🎤  |
 |   9    | 2026-10-21 | Intervals                | Стандартный · 20 мин | [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/), [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/), [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/), [1229. Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/), [57. Insert Interval](https://leetcode.com/problems/insert-interval/)                                                                                                                     |      |
 |   10   | 2026-10-28 | Linked List              | Стандартный · 20 мин | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/), [146. LRU Cache](https://leetcode.com/problems/lru-cache/), [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/), [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/), [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                                                                                                                                                        |      |
@@ -56,7 +58,7 @@
 
 - Пересдать с нуля все задачи с Retention 1–2 из фазы A.
 - Добрать по 2–3 задачи в тех темах, где в журнале хуже метрики (медленнее среднее время, чаще не сам ловил ошибку на
-  фазе 7) — брать из полных таблиц `README.md`, не только из `PASS1.md`.
+  фазе 7) — брать из полных таблиц `README.md`, не только из списка недель выше.
 - Бюджет — только Боевой (15 мин).
 - Мок — раз в 2 недели.
 
@@ -73,7 +75,8 @@
 
 - **2026-10-14** (конец недели 8): завершена Фаза A на Щадящем бюджете — протокол проходится без пропуска фазы 7.
 - **2027-01-06** (конец недели 20): темы 1–20 закрыты на Стандартном бюджете.
-- **2027-03-03** (конец недели 28): весь `PASS1.md` пройден минимум один раз, журнал показывает тренд по среднему
+- **2027-03-03** (конец недели 28): все задачи недель 1–28 пройдены минимум один раз, журнал показывает тренд по
+  среднему
   времени и % самостоятельно найденных ошибок.
 - **2027-04-21**: все Retention 1–2 пересданы, слабые темы добраны.
 - **2027-05-26**: собеседование.

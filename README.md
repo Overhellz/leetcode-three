@@ -1,8 +1,6 @@
 # leetcode-three
 
-# leetcode-next
-
-https://github.com/Overhellz/leetcode-next
+https://github.com/Overhellz/leetcode-three
 
 ---
 
@@ -93,10 +91,10 @@ https://leetcode.com/studyplan/leetcode-75/
 |  Easy  | 1572. Matrix Diagonal Sum                                         | https://leetcode.com/problems/matrix-diagonal-sum/                                         |   ✅    | 37.5%  |   —   |  —   |   —    |           |
 | Medium | 36. Valid Sudoku                                                  | https://leetcode.com/problems/valid-sudoku/                                                |   ✅    | 25.0%  |   ✅   |  —   |   —    |           |
 | Medium | 54. Spiral Matrix                                                 | https://leetcode.com/problems/spiral-matrix/                                               |   ✅    | 25.0%  |   ✅   |  —   |   ✅    |           |
-|  Easy  | 67. Add Binary                                                    | https://leetcode.com/problems/add-binary/                                                  |   ✅    | 25.0%  |   ✅   |  —   |   —    | 3         |
+|  Easy  | 67. Add Binary                                                    | https://leetcode.com/problems/add-binary/                                                  |   ✅    | 25.0%  |   ✅   |  —   |   —    | 2         |
 |  Hard  | 68. Text Justification                                            | https://leetcode.com/problems/text-justification/                                          |   ✅    | 25.0%  |   ✅   |  —   |   —    |           |
 |  Easy  | 169. Majority Element                                             | https://leetcode.com/problems/majority-element/                                            |   ✅    | 25.0%  |   ✅   |  —   |   ✅    |           |
-|  Easy  | 1464. Maximum Product of Two Elements in an Array                 | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/                 |   ✅    | 25.0%  |   —   |  —   |   —    | 4         |
+|  Easy  | 1464. Maximum Product of Two Elements in an Array                 | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/                 |   ✅    | 25.0%  |   —   |  —   |   —    | 3         |
 | Medium | 6. Zigzag Conversion                                              | https://leetcode.com/problems/zigzag-conversion/                                           |   —    |   —    |   ✅   |  —   |   —    |           |
 | Medium | 12. Integer to Roman                                              | https://leetcode.com/problems/integer-to-roman/                                            |   —    |   —    |   ✅   |  —   |   —    |           |
 |  Easy  | 13. Roman to Integer                                              | https://leetcode.com/problems/roman-to-integer/                                            |   —    |   —    |   ✅   |  —   |   —    |           |
@@ -236,7 +234,7 @@ https://leetcode.com/studyplan/leetcode-75/
 | Medium | 739. Daily Temperatures            | https://leetcode.com/problems/daily-temperatures/             |   ✅    | 25.0%  |   —   |  ✅   |   ✅    |           |
 |  Hard  | 42. Trapping Rain Water            | https://leetcode.com/problems/trapping-rain-water/            |   ✅    | 62.5%  |   ✅   |  —   |   ✅    |           |
 |  Hard  | 84. Largest Rectangle in Histogram | https://leetcode.com/problems/largest-rectangle-in-histogram/ |   —    |   —    |   —   |  —   |   ✅    |           |
-| Medium | Next Greater Element I             | https://leetcode.com/problems/next-greater-element-i/         |   —    |   —    |   —   |  —   |   —    |           |
+|  Easy  | 496. Next Greater Element I        | https://leetcode.com/problems/next-greater-element-i/         |   —    |   —    |   —   |  —   |   —    |           |
 
 # 8. Binary Search
 
@@ -585,7 +583,7 @@ https://leetcode.com/studyplan/leetcode-75/
   паттернами; обоснование каждого шага — в списке выше.
 - 4 задачи в разделе **Design / OOP** (Function Composition, Counter II, Allow One Function Call, Create Hello World
   Function) помечены как низкорелевантные — это JS-специфичные задачи на замыкания/функциональщину из трека LeetCode "30
-  Days of JS", вряд ли актуальны для Python-бэкенд-собеседования, но тегированы Yandex в источнике — оставлены для
+  Days of JS", вряд ли актуальны для Java-бэкенд-собеседования, но тегированы Yandex в источнике — оставлены для
   полноты.
 - Задача, которая по своей природе решается двумя разными стандартными способами (например Trapping Rain Water — two
   pointers и monotonic stack), намеренно оставлена в обеих подходящих темах, а не только в "основной".

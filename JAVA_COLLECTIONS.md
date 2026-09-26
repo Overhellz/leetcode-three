@@ -47,20 +47,23 @@ for (int i = 0; i < nums.length; i++) {
 
 ```
 // топ-K частых элементов: min-heap по частоте размера k
-PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[1] - b[1]); // a[1] = частота
+PriorityQueue<int[]> heap = new PriorityQueue<>(Comparator.comparingInt(a -> a[1])); // a[1] = частота
 for (var entry : freq.entrySet()) {
     heap.offer(new int[]{entry.getKey(), entry.getValue()});
     if (heap.size() > k) heap.poll();
 }
 
 // Дейкстра: очередь по расстоянию, [вершина, расстояние]
-PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
 pq.offer(new int[]{start, 0});
 
 // k ближайших точек к началу координат — по квадрату расстояния, по убыванию (max-heap размера k)
 PriorityQueue<int[]> farthest = new PriorityQueue<>(
-    (a, b) -> (b[0]*b[0] + b[1]*b[1]) - (a[0]*a[0] + a[1]*a[1])
+    (a, b) -> Integer.compare(b[0]*b[0] + b[1]*b[1], a[0]*a[0] + a[1]*a[1])
 );
+
+// ⚠️ не писать компаратор вычитанием (a, b) -> a - b: переполнение на больших/отрицательных числах
+// (Integer.MIN_VALUE - 1 > 0). Всегда Integer.compare(...) или Comparator.comparingInt(...).
 ```
 
 ## Set
@@ -103,7 +106,8 @@ inDegree.computeIfPresent(node, (k, v) -> v - 1);
 ```
 
 - Итерация: `for (Map.Entry<K,V> e : map.entrySet())`, `map.keySet()`, `map.values()`.
-- `LinkedHashMap` — сохраняет порядок вставки, основа для LRU Cache (+ override `removeEldestEntry`).
+- `LinkedHashMap` — сохраняет порядок вставки, основа для LRU Cache: `new LinkedHashMap<>(cap, 0.75f, true)` —
+  `true` включает порядок **доступа** (без него `get` не обновляет «свежесть») + override `removeEldestEntry`.
 - `TreeMap` — как TreeSet, но с value: `floorKey`, `ceilingKey`, `firstKey`, `lastKey`.
 
 ---
@@ -114,8 +118,9 @@ inDegree.computeIfPresent(node, (k, v) -> v - 1);
 
 ```
 int[][] intervals = {{1,3},{2,6},{8,10}};
-Arrays.sort(intervals, (a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);
-// то же самое через Comparator.comparingInt + thenComparingInt (безопаснее — без риска overflow на a[0]-b[0])
+Arrays.sort(intervals, (a, b) -> a[0] != b[0] ? Integer.compare(a[0], b[0]) : Integer.compare(a[1], b[1]));
+// то же самое через Comparator.comparingInt + thenComparingInt
+// (int[] iv) — явный тип обязателен: в цепочке .thenComparingInt Java иначе выведет Object и не скомпилирует iv[0]
 Arrays.sort(intervals, Comparator.comparingInt((int[] iv) -> iv[0]).thenComparingInt(iv -> iv[1]));
 ```
 
@@ -131,7 +136,7 @@ class Employee {
 List<Employee> employees = ...;
 employees.sort(
     Comparator.comparing((Employee e) -> e.department)      // сначала по отделу
-              .thenComparing(e -> -e.salary)                 // затем по зарплате по убыванию
+              .thenComparing(e -> e.salary, Comparator.reverseOrder()) // затем по зарплате по убыванию
               .thenComparing(e -> e.name)                    // затем по имени
 );
 
