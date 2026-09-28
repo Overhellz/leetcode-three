@@ -1,0 +1,35 @@
+class Example {
+    // Смысл такой: «Если добавление value в сет строки row вернуло false (значит, элемент уже был) — верни false из метода.»
+    public void computeIfAbsentExample() {
+        // старая запись
+        Set<Character> rowSet = rows.get(row);
+        if (rowSet == null) {
+            rowSet = new HashSet<>();
+            rows.put(row, rowSet);
+        }
+        boolean added = rowSet.add(value);
+        if (!added) {
+            return false;
+        }
+
+        // аналог
+        if (!rows.computeIfAbsent(row, k -> new HashSet<>()).add(value)) return false;
+    }
+
+    // putIfAbsent кладёт готовое значение и возвращает null при вставке → нельзя сразу .add().
+    public void putIfAbsentExample() {
+        Set<Character> rowSet = rows.get(row);   // пробуем достать сет
+        if (rowSet == null) {                     // если его ещё нет
+            rowSet = new HashSet<>();             // создаём
+            rows.put(row, rowSet);                // кладём в мапу
+        }
+        boolean added = rowSet.add(value);        // пытаемся добавить
+        if (!added) {                             // если дубликат
+            return false;                         // выходим
+        }
+
+        // аналог
+        rows.putIfAbsent(row, new HashSet<>());   // создали, если не было
+        if (!rows.get(row).add(value)) return false;  // взяли через get
+    }
+}

@@ -1,0 +1,24 @@
+class Solution {
+    public int gcdOfOddEvenSums(int n) {
+        int sumOdd = 0;
+        int sumEven = 0;
+
+        for(int i = 0, int odd = 1, int even = 2; i < n; i++, odd += 2, even += 2) {
+            sumOdd += odd;
+            sumEven += even;
+        }
+
+        int gcd = gcd(sumOdd, sumEven);
+
+        return gcd;
+    }
+
+    private int gcd(int a, int b) {
+        while (b != 0) {
+            int t = a % b;
+            a = b;
+            b = t;
+        }
+        return a;
+    }
+}

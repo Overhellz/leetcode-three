@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        Map<Integer, Set<Character>> rows = new HashMap<>();
+        Map<Integer, Set<Character>> cols = new HashMap<>();
+        Map<Integer, Set<Character>> squares = new HashMap<>();
+
+        // TODO
+        for(int row = 0; row < board.length; row++) {
+            for(int col = 0; col < board[0].length; col++) {
+                char value = board[row][col];
+
+
+
+                int squareKey = (row / 3) * 3 + col / 3;
+
+
+
+            }
+        }
+    }
+}
