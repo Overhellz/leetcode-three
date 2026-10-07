@@ -65,10 +65,12 @@ https://leetcode.com/studyplan/leetcode-75/
 
 | Level  | Name                                                              | Link                                                                                       | Retention |
 |:------:|:------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:----------|
+|  Easy  | 1431. Kids With the Greatest Number of Candies                    | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/                    | 4         |
+|  Easy  | 1464. Maximum Product of Two Elements in an Array                 | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/                 | 5         |
+|  Easy  | 605. Can Place Flowers                                            | https://leetcode.com/problems/can-place-flowers/                                           | 3   /     |
+|  Easy  | 169. Majority Element                                             | https://leetcode.com/problems/majority-element/                                            | 5         |
 |  Easy  | 1768. Merge Strings Alternately                                   | https://leetcode.com/problems/merge-strings-alternately/                                   | 4         |
 |  Easy  | 1071. Greatest Common Divisor of Strings                          | https://leetcode.com/problems/greatest-common-divisor-of-strings/                          | 2         |
-|  Easy  | 1431. Kids With the Greatest Number of Candies                    | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/                    | 4         |
-|  Easy  | 605. Can Place Flowers                                            | https://leetcode.com/problems/can-place-flowers/                                           | 3         |
 |  Easy  | 345. Reverse Vowels of a String                                   | https://leetcode.com/problems/reverse-vowels-of-a-string/                                  | 4         |
 | Medium | 334. Increasing Triplet Subsequence                               | https://leetcode.com/problems/increasing-triplet-subsequence/                              |           |
 | Medium | 443. String Compression                                           | https://leetcode.com/problems/string-compression/                                          |           |
@@ -81,8 +83,6 @@ https://leetcode.com/studyplan/leetcode-75/
 | Medium | 54. Spiral Matrix                                                 | https://leetcode.com/problems/spiral-matrix/                                               |           |
 |  Easy  | 67. Add Binary                                                    | https://leetcode.com/problems/add-binary/                                                  | 2         |
 |  Hard  | 68. Text Justification                                            | https://leetcode.com/problems/text-justification/                                          |           |
-|  Easy  | 169. Majority Element                                             | https://leetcode.com/problems/majority-element/                                            | 5         |
-|  Easy  | 1464. Maximum Product of Two Elements in an Array                 | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/                 | 3         |
 | Medium | 6. Zigzag Conversion                                              | https://leetcode.com/problems/zigzag-conversion/                                           |           |
 | Medium | 12. Integer to Roman                                              | https://leetcode.com/problems/integer-to-roman/                                            | 2         |
 |  Easy  | 13. Roman to Integer                                              | https://leetcode.com/problems/roman-to-integer/                                            | 2         |
@@ -109,13 +109,7 @@ https://leetcode.com/studyplan/leetcode-75/
 БЛОК 1. Один проход по массиву
 Логика: один проход, держим лучшее значение.
 
-1431. Kids With the Greatest Number of Candies (Easy) – найти максимум, сравнить каждого с ним.
-
-1464. Maximum Product of Two Elements in an Array (Easy) – два наибольших за один проход.
-
 605. Can Place Flowers (Easy) – жадно сажать в первое свободное место (проверка соседей и границ).
-
-169. Majority Element (Easy) ★ – голосование Бойера–Мура.
 
 БЛОК 2. Монотонные участки, серии, подъёмы и спуски
 Логика: сравнение с соседом, текущая серия + лучшая.
@@ -228,54 +222,43 @@ https://leetcode.com/studyplan/leetcode-75/
 |  Easy  | 2570. Merge Two 2D Arrays by Summing Values    | https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/    |           |
 | Medium | 15. 3Sum                                       | https://leetcode.com/problems/3sum/                                     |           |
 
+БЛОК 1. Разворот и сборка с конца
+
+344. Reverse String (Easy)
+977. Squares of a Sorted Array (Easy) ★
+
 БЛОК 2. Чтение/запись (in-place)
-Логика: read проходит весь массив, write отмечает границу результата.
 
-26. Remove Duplicates from Sorted Array (Easy) – указатель записи, пишем, если отличается от последнего записанного.
-
-283. Move Zeroes (Easy) – указатель записи для ненулевых, хвост заполнить нулями.
+26. Remove Duplicates from Sorted Array (Easy)
+27. Remove Element (Easy)              ← добавить
+283. Move Zeroes (Easy)
 
 БЛОК 3. Две последовательности
-Логика: по указателю на каждый вход, двигается тот, чей элемент обработан.
 
-392. Is Subsequence (Easy) – указатель по t двигается всегда, по s — при совпадении.
-
-88. Merge Sorted Array (Easy) – слияние с конца, больший элемент записываем в конец nums1.
-
-2570. Merge Two 2D Arrays by Summing Values (Easy) – слияние по id, при равных id — суммировать.
-
-844. Backspace String Compare (Easy) – StringBuilder как стек; для O(1) — идти с конца со счётчиком '#'.
-
-1868. Product of Two Run-Length Encoded Arrays (Medium, Premium → 986. Interval List Intersections) –
-по указателю на каждый список, берём min из оставшихся длин, двигаем исчерпанный.
+392. Is Subsequence (Easy)
+88. Merge Sorted Array (Easy)
+2570. Merge Two 2D Arrays by Summing Values (Easy)
+844. Backspace String Compare (Easy)
+1868. Product of Two RLE Arrays (Medium, Premium → 986)
 
 БЛОК 4. Палиндромы
-Логика: проверка встречными указателями или расширение от центра.
 
-680. Valid Palindrome II (Easy) – при первом несовпадении проверить оба варианта пропуска символа.
-
-5. Longest Palindromic Substring (Medium) ★ – расширение от каждого центра (2n − 1 центров: символ и промежуток).
+125. Valid Palindrome (Easy)           ← добавить (база!)
+680. Valid Palindrome II (Easy)
+5. Longest Palindromic Substring (Medium) ★
 
 БЛОК 5. Суммы в отсортированном массиве
-Логика: сумма меньше цели → left++, больше → right--.
 
-167. Two Sum II - Input Array Is Sorted (Medium) – встречные указатели по сумме.
-
-1679. Max Number of K-Sum Pairs (Medium) – сортировка + встречные указатели (или HashMap счётчиков).
-
-15. 3Sum (Medium) – сортировка, фиксируем i, остаток — как 167; пропуск дубликатов.
-
-18. 4Sum (Medium) – сортировка, два вложенных цикла + 167; пропуск дубликатов, сумма в long.
+167. Two Sum II (Medium)
+1679. Max Number of K-Sum Pairs (Medium)
+15. 3Sum (Medium)
+18. 4Sum (Medium)
 
 БЛОК 6. Жадное сужение диапазона
-Логика: на каждом шаге отбрасываем край, который точно не улучшит ответ.
 
-11. Container With Most Water (Medium) ★ – встречные указатели, двигаем меньшую стенку.
-
-658. Find K Closest Elements (Medium) – сужать окно с краёв, убирая более далёкий элемент, пока не останется k.
-
-42. Trapping Rain Water (Hard) ★ – встречные указатели с leftMax/rightMax, двигаем сторону с меньшим максимумом.
-
+11. Container With Most Water (Medium) ★
+658. Find K Closest Elements (Medium)
+42. Trapping Rain Water (Hard) ★
 
 # 3. Sliding Window
 
