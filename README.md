@@ -61,16 +61,6 @@ https://leetcode.com/studyplan/leetcode-75/
 27. **Math / Simulation** — низкоприоритетные точечные задачи
 28. **SQL** — отдельный навык, не про алгоритмы — логично закрывать после всей алгоритмической части
 
----
-
-**Колонки-метки:**
-
-- **Yandex** / **Freq %** — встречается ли задача в подборке компанийского тега Yandex на LeetCode, и с какой частотой.
-- **TP150** — входит в официальный study plan [Top Interview 150](https://leetcode.com/studyplan/top-interview-150/) (
-  150 задач).
-- **LC75** — входит в [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/) (75 задач).
-- **Top100** — входит в [Top 100 Liked Questions](https://leetcode.com/studyplan/top-100-liked/) (100 задач).
-
 # 1. Array / String
 
 | Level  | Name                                                              | Link                                                                                       | Retention |
@@ -94,8 +84,8 @@ https://leetcode.com/studyplan/leetcode-75/
 |  Easy  | 169. Majority Element                                             | https://leetcode.com/problems/majority-element/                                            | 5         |
 |  Easy  | 1464. Maximum Product of Two Elements in an Array                 | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/                 | 3         |
 | Medium | 6. Zigzag Conversion                                              | https://leetcode.com/problems/zigzag-conversion/                                           |           |
-| Medium | 12. Integer to Roman                                              | https://leetcode.com/problems/integer-to-roman/                                            |           |
-|  Easy  | 13. Roman to Integer                                              | https://leetcode.com/problems/roman-to-integer/                                            |           |
+| Medium | 12. Integer to Roman                                              | https://leetcode.com/problems/integer-to-roman/                                            | 2         |
+|  Easy  | 13. Roman to Integer                                              | https://leetcode.com/problems/roman-to-integer/                                            | 2         |
 |  Easy  | 14. Longest Common Prefix                                         | https://leetcode.com/problems/longest-common-prefix/                                       |           |
 |  Easy  | 28. Find the Index of the First Occurrence in a String            | https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/          |           |
 | Medium | 31. Next Permutation                                              | https://leetcode.com/problems/next-permutation/                                            |           |
@@ -104,82 +94,114 @@ https://leetcode.com/studyplan/leetcode-75/
 |  Easy  | 58. Length of Last Word                                           | https://leetcode.com/problems/length-of-last-word/                                         |           |
 | Medium | 73. Set Matrix Zeroes                                             | https://leetcode.com/problems/set-matrix-zeroes/                                           |           |
 | Medium | 75. Sort Colors                                                   | https://leetcode.com/problems/sort-colors/                                                 |           |
-| Medium | 80. Remove Duplicates from Sorted Array II                        | https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/                      |           |
+| Medium | 80. Remove Duplicates from Sorted Array II                        | https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/                      | 2         |
 | Medium | 122. Best Time to Buy and Sell Stock II                           | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/                          |           |
 |  Hard  | 135. Candy                                                        | https://leetcode.com/problems/candy/                                                       |           |
-| Medium | 151. Reverse Words in a String                                    | https://leetcode.com/problems/reverse-words-in-a-string/                                   |           |
-| Medium | 189. Rotate Array                                                 | https://leetcode.com/problems/rotate-array/                                                |           |
+| Medium | 151. Reverse Words in a String                                    | https://leetcode.com/problems/reverse-words-in-a-string/                                   | 1         |
+| Medium | 189. Rotate Array                                                 | https://leetcode.com/problems/rotate-array/                                                | 2         |
 | Medium | 240. Search a 2D Matrix II                                        | https://leetcode.com/problems/search-a-2d-matrix-ii/                                       |           |
 | Medium | 274. H-Index                                                      | https://leetcode.com/problems/h-index/                                                     |           |
 | Medium | 287. Find the Duplicate Number                                    | https://leetcode.com/problems/find-the-duplicate-number/                                   |           |
 | Medium | 289. Game of Life                                                 | https://leetcode.com/problems/game-of-life/                                                |           |
 
-БЛОК 3. Матрицы (2D-массивы) и хеширование
-Логика: сначала простые обходы, потом проверка уникальности, потом спираль.
+★ – приём нужно знать заранее, из предыдущих задач его не вывести.
 
-36. Valid Sudoku (Medium) – проверка уникальности в строках/столбцах/квадратах (HashMap / Set).
+БЛОК 1. Один проход по массиву
+Логика: один проход, держим лучшее значение.
 
-73. Set Matrix Zeroes (Medium) – маркировка строк и столбцов (использование первого ряда как маркера).
+1431. Kids With the Greatest Number of Candies (Easy) – найти максимум, сравнить каждого с ним.
 
-54. Spiral Matrix (Medium) – обход матрицы по спирали (границы).
+1464. Maximum Product of Two Elements in an Array (Easy) – два наибольших за один проход.
 
-48. Rotate Image (Medium) – поворот матрицы на 90° (транспонирование + реверс).
+605. Can Place Flowers (Easy) – жадно сажать в первое свободное место (проверка соседей и границ).
 
-БЛОК 4. Жадные алгоритмы и сжатие данных
-Логика: оптимизация памяти и следование локально оптимальным решениям.
+169. Majority Element (Easy) ★ – голосование Бойера–Мура.
 
-122. Best Time to Buy and Sell Stock II (Medium) – жадный сбор прибыли.
+БЛОК 2. Монотонные участки, серии, подъёмы и спуски
+Логика: сравнение с соседом, текущая серия + лучшая.
 
-334. Increasing Triplet Subsequence (Medium) – жадный поиск тройки (без вложенных циклов).
+896. Monotonic Array (Easy) – два флага, сравнение только соседей.
 
-443. String Compression (Medium) – сжатие строки с подсчетом повторов.
+674. Longest Continuous Increasing Subsequence (Easy) – длина текущей серии и максимум.
 
-80. Remove Duplicates from Sorted Array II (Medium) – сжатие массива на месте.
+3105. Longest Strictly Increasing or Strictly Decreasing Subarray (Easy) – две серии одновременно (рост и спад).
 
-28. Find the Index of the First Occurrence in a String (Easy) – поиск подстроки (переход к следующему блоку).
+228. Summary Ranges (Easy) – запомнить начало серии, дойти до конца, записать отрезок.
 
-БЛОК 5. Сложные преобразования, римские числа и ротация
-Логика: алгоритмы с несколькими проходами и преобразованием форматов.
+122. Best Time to Buy and Sell Stock II (Medium) – сумма всех подъёмов цены.
 
-13. Roman to Integer (Easy) – перевод в число (слева направо с проверкой вычитаний).
+334. Increasing Triplet Subsequence (Medium) ★ – first/second: два наименьших кандидата.
 
-12. Integer to Roman (Medium) – обратный перевод (жадный подбор значений).
+135. Candy (Hard) – два прохода (слева и справа), во втором max.
 
-58. Length of Last Word (Easy) – работа с разделителями.
+БЛОК 3. Строки — базовые операции
+Логика: посимвольный проход, два входа, сборка через StringBuilder.
 
-151. Reverse Words in a String (Medium) – реверс слов (сначала реверс всей строки, потом слов).
+58. Length of Last Word (Easy) – с конца: пропустить пробелы, посчитать буквы.
 
-189. Rotate Array (Medium) – циклический сдвиг (реверс частей).
+1768. Merge Strings Alternately (Easy) – один цикл while (i < n || j < m).
 
-31. Next Permutation (Medium) – генерация следующей перестановки (поиск точки спада).
+14. Longest Common Prefix (Easy) – вертикальный проход до первого расхождения.
 
-6. Zigzag Conversion (Medium) – зигзагообразное чтение (индексация строк).
+28. Find the Index of the First Occurrence in a String (Easy) – посимвольное сравнение с каждой позиции.
 
-БЛОК 6. Алгоритмические челленджи (средние и хард)
-Логика: многопроходные алгоритмы и обработка граничных случаев.
+345. Reverse Vowels of a String (Easy) – два указателя навстречу.
 
-274. H-Index (Medium) – подсчет цитирований (сортировка или счетчики).
+67. Add Binary (Easy) – сложение столбиком с конца, перенос, reverse.
+
+1071. Greatest Common Divisor of Strings (Easy) ★ – проверка a + b == b + a, длина = НОД длин.
+
+БЛОК 4. Строки — преобразования и симуляция
+Логика: таблицы соответствий, разбор по словам, аккуратная симуляция.
+
+13. Roman to Integer (Easy) – символ меньше следующего → вычесть, иначе прибавить.
+
+12. Integer to Roman (Medium) – жадно по 13 номиналам (включая 900, 400, 90…).
+
+151. Reverse Words in a String (Medium) – с конца: пропустить пробелы, вырезать слово, дописать.
+
+443. String Compression (Medium) – указатели read/write, счётчик записывается цифрами.
+
+6. Zigzag Conversion (Medium) – StringBuilder на каждую строку, движение вниз-вверх.
+
+68. Text Justification (Hard) – упаковка слов, пробелы через / и %, последняя строка влево.
+
+БЛОК 5. Перестановки массива на месте
+Логика: указатели и развороты без дополнительной памяти.
+
+80. Remove Duplicates from Sorted Array II (Medium) – указатель записи, сравнение с nums[write - 2].
 
 75. Sort Colors (Medium) – голландский флаг (три указателя).
 
-287. Find the Duplicate Number (Medium) – поиск дубликата как цикла в linked list (Флойд).
+189. Rotate Array (Medium) ★ – три разворота (весь, первые k, остальные).
 
-289. Game of Life (Medium) – параллельные изменения в клеточном автомате (кодирование состояний).
+31. Next Permutation (Medium) ★ – найти точку спада справа, обменять, развернуть хвост.
 
-240. Search a 2D Matrix II (Medium) – поиск в матрице с упорядоченными строками/столбцами (левый нижний угол).
+БЛОК 6. Матрицы
+Логика: индексы, границы, хранение состояния прямо в матрице.
 
-135. Candy (Hard) – раздача конфет (два прохода – слева и справа).
+1572. Matrix Diagonal Sum (Easy) – i и n - 1 - i, при нечётном n вычесть центр.
 
-БЛОК 7. Самое сложное: Text Justification и Missing Positive
-Логика: задачи с обилием условий и нетривиальным использованием индексов.
+36. Valid Sudoku (Medium) – boolean[9][9] для строк, столбцов, квадратов (квадрат r / 3 * 3 + c / 3).
 
-68. Text Justification (Hard) – построчное выравнивание текста.
+240. Search a 2D Matrix II (Medium) – «лесенка» из правого верхнего угла.
 
-41. First Missing Positive (Hard) – упаковка чисел в индексы массива (сегрегация).
+54. Spiral Matrix (Medium) – четыре сужающиеся границы.
 
-БОНУС (Классика для закрепления):
+48. Rotate Image (Medium) – транспонировать + развернуть строки.
 
-14. Longest Common Prefix – после всех строковых задач (как итог).
+73. Set Matrix Zeroes (Medium) – метки строк/столбцов; для O(1) — метки в первой строке/столбце.
+
+289. Game of Life (Medium) – два состояния в одной клетке (бит текущего и следующего).
+
+БЛОК 7. Индекс как хеш
+Логика: значения ограничены длиной массива → используем их как индексы.
+
+274. H-Index (Medium) – подсчёт в корзинах 0..n (или сортировка).
+
+287. Find the Duplicate Number (Medium) ★ – поиск входа в цикл (Флойд), массив не меняется.
+
+41. First Missing Positive (Hard) – расставить числа по местам x - 1 обменами, найти первое несовпадение.
 
 # 2. Two Pointers
 
@@ -187,24 +209,73 @@ https://leetcode.com/studyplan/leetcode-75/
 |:------:|:-----------------------------------------------|:------------------------------------------------------------------------|:----------|
 |  Easy  | 283. Move Zeroes                               | https://leetcode.com/problems/move-zeroes/                              |           |
 | Medium | 1679. Max Number of K-Sum Pairs                | https://leetcode.com/problems/max-number-of-k-sum-pairs/                |           |
-|  Easy  | 344. Reverse String                            | https://leetcode.com/problems/reverse-string/                           |           |
-|  Easy  | 977. Squares of a Sorted Array                 | https://leetcode.com/problems/squares-of-a-sorted-array/                |           |
+|  Easy  | 344. Reverse String                            | https://leetcode.com/problems/reverse-string/                           | 5         |
+|  Easy  | 977. Squares of a Sorted Array                 | https://leetcode.com/problems/squares-of-a-sorted-array/                | 4         |
 |  Easy  | 844. Backspace String Compare                  | https://leetcode.com/problems/backspace-string-compare/                 |           |
 | Medium | 18. 4Sum                                       | https://leetcode.com/problems/4sum/                                     |           |
 | Medium | 658. Find K Closest Elements                   | https://leetcode.com/problems/find-k-closest-elements/                  |           |
-|  Easy  | 125. Valid Palindrome                          | https://leetcode.com/problems/valid-palindrome/                         |           |
+|  Easy  | 125. Valid Palindrome                          | https://leetcode.com/problems/valid-palindrome/                         | 4         |
 |  Easy  | 680. Valid Palindrome II                       | https://leetcode.com/problems/valid-palindrome-ii/                      |           |
 | Medium | 5. Longest Palindromic Substring               | https://leetcode.com/problems/longest-palindromic-substring/            |           |
 |  Easy  | 88. Merge Sorted Array                         | https://leetcode.com/problems/merge-sorted-array/                       |           |
 |  Easy  | 392. Is Subsequence                            | https://leetcode.com/problems/is-subsequence/                           |           |
 |  Hard  | 42. Trapping Rain Water                        | https://leetcode.com/problems/trapping-rain-water/                      |           |
 | Medium | 11. Container With Most Water                  | https://leetcode.com/problems/container-with-most-water/                |           |
-|  Easy  | 27. Remove Element                             | https://leetcode.com/problems/remove-element/                           |           |
-|  Easy  | 26. Remove Duplicates from Sorted Array        | https://leetcode.com/problems/remove-duplicates-from-sorted-array/      |           |
+|  Easy  | 27. Remove Element                             | https://leetcode.com/problems/remove-element/                           | 5         |
+|  Easy  | 26. Remove Duplicates from Sorted Array        | https://leetcode.com/problems/remove-duplicates-from-sorted-array/      | 3         |
 | Medium | 1868. Product of Two Run-Length Encoded Arrays | https://leetcode.com/problems/product-of-two-run-length-encoded-arrays/ |           |
 | Medium | 167. Two Sum II - Input Array Is Sorted        | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/         |           |
 |  Easy  | 2570. Merge Two 2D Arrays by Summing Values    | https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/    |           |
 | Medium | 15. 3Sum                                       | https://leetcode.com/problems/3sum/                                     |           |
+
+БЛОК 2. Чтение/запись (in-place)
+Логика: read проходит весь массив, write отмечает границу результата.
+
+26. Remove Duplicates from Sorted Array (Easy) – указатель записи, пишем, если отличается от последнего записанного.
+
+283. Move Zeroes (Easy) – указатель записи для ненулевых, хвост заполнить нулями.
+
+БЛОК 3. Две последовательности
+Логика: по указателю на каждый вход, двигается тот, чей элемент обработан.
+
+392. Is Subsequence (Easy) – указатель по t двигается всегда, по s — при совпадении.
+
+88. Merge Sorted Array (Easy) – слияние с конца, больший элемент записываем в конец nums1.
+
+2570. Merge Two 2D Arrays by Summing Values (Easy) – слияние по id, при равных id — суммировать.
+
+844. Backspace String Compare (Easy) – StringBuilder как стек; для O(1) — идти с конца со счётчиком '#'.
+
+1868. Product of Two Run-Length Encoded Arrays (Medium, Premium → 986. Interval List Intersections) –
+по указателю на каждый список, берём min из оставшихся длин, двигаем исчерпанный.
+
+БЛОК 4. Палиндромы
+Логика: проверка встречными указателями или расширение от центра.
+
+680. Valid Palindrome II (Easy) – при первом несовпадении проверить оба варианта пропуска символа.
+
+5. Longest Palindromic Substring (Medium) ★ – расширение от каждого центра (2n − 1 центров: символ и промежуток).
+
+БЛОК 5. Суммы в отсортированном массиве
+Логика: сумма меньше цели → left++, больше → right--.
+
+167. Two Sum II - Input Array Is Sorted (Medium) – встречные указатели по сумме.
+
+1679. Max Number of K-Sum Pairs (Medium) – сортировка + встречные указатели (или HashMap счётчиков).
+
+15. 3Sum (Medium) – сортировка, фиксируем i, остаток — как 167; пропуск дубликатов.
+
+18. 4Sum (Medium) – сортировка, два вложенных цикла + 167; пропуск дубликатов, сумма в long.
+
+БЛОК 6. Жадное сужение диапазона
+Логика: на каждом шаге отбрасываем край, который точно не улучшит ответ.
+
+11. Container With Most Water (Medium) ★ – встречные указатели, двигаем меньшую стенку.
+
+658. Find K Closest Elements (Medium) – сужать окно с краёв, убирая более далёкий элемент, пока не останется k.
+
+42. Trapping Rain Water (Hard) ★ – встречные указатели с leftMax/rightMax, двигаем сторону с меньшим максимумом.
+
 
 # 3. Sliding Window
 
@@ -233,45 +304,45 @@ https://leetcode.com/studyplan/leetcode-75/
 
 # 4. Prefix Sum
 
-| Level  | Name                              | Link                                                        | Yandex | Freq % | TP150 | LC75 | Top100 | Retention |
-|:------:|:----------------------------------|:------------------------------------------------------------|:------:|:------:|:-----:|:----:|:------:|:----------|
-|  Easy  | 303. Range Sum Query - Immutable  | https://leetcode.com/problems/range-sum-query-immutable/    |   —    |   —    |   —   |  —   |   —    |           |
-|  Easy  | 724. Find Pivot Index             | https://leetcode.com/problems/find-pivot-index/             |   —    |   —    |   —   |  ✅   |   —    |           |
-| Medium | 560. Subarray Sum Equals K        | https://leetcode.com/problems/subarray-sum-equals-k/        |   ✅    | 75.0%  |   —   |  —   |   ✅    |           |
-| Medium | 525. Contiguous Array             | https://leetcode.com/problems/contiguous-array/             |   —    |   —    |   —   |  —   |   —    |           |
-| Medium | 974. Subarray Sums Divisible by K | https://leetcode.com/problems/subarray-sums-divisible-by-k/ |   ✅    | 25.0%  |   —   |  —   |   —    |           |
-| Medium | 238. Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self/ |   ✅    | 50.0%  |   ✅   |  ✅   |   ✅    |           |
-| Medium | 523. Continuous Subarray Sum      | https://leetcode.com/problems/continuous-subarray-sum/      |   ✅    | 37.5%  |   —   |  —   |   —    |           |
-|  Easy  | 1732. Find the Highest Altitude   | https://leetcode.com/problems/find-the-highest-altitude/    |   —    |   —    |   —   |  ✅   |   —    |           |
+| Level  | Name                              | Link                                                        | Retention |
+|:------:|:----------------------------------|:------------------------------------------------------------|:----------|
+|  Easy  | 303. Range Sum Query - Immutable  | https://leetcode.com/problems/range-sum-query-immutable/    |           |
+|  Easy  | 724. Find Pivot Index             | https://leetcode.com/problems/find-pivot-index/             |           |
+| Medium | 560. Subarray Sum Equals K        | https://leetcode.com/problems/subarray-sum-equals-k/        |           |
+| Medium | 525. Contiguous Array             | https://leetcode.com/problems/contiguous-array/             |           |
+| Medium | 974. Subarray Sums Divisible by K | https://leetcode.com/problems/subarray-sums-divisible-by-k/ |           |
+| Medium | 238. Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self/ |           |
+| Medium | 523. Continuous Subarray Sum      | https://leetcode.com/problems/continuous-subarray-sum/      |           |
+|  Easy  | 1732. Find the Highest Altitude   | https://leetcode.com/problems/find-the-highest-altitude/    |           |
 
 # 5. Hash Map
 
-| Level  | Name                                             | Link                                                                      | Yandex | Freq % | TP150 | LC75 | Top100 | Retention |
-|:------:|:-------------------------------------------------|:--------------------------------------------------------------------------|:------:|:------:|:-----:|:----:|:------:|:----------|
-|  Easy  | 706. Design HashMap                              | https://leetcode.com/problems/design-hashmap/                             |   —    |   —    |   —   |  —   |   —    |           |
-|  Easy  | 136. Single Number                               | https://leetcode.com/problems/single-number/                              |   —    |   —    |   ✅   |  ✅   |   ✅    |           |
-| Medium | 49. Group Anagrams                               | https://leetcode.com/problems/group-anagrams/                             |   ✅    | 62.5%  |   ✅   |  —   |   ✅    |           |
-| Medium | 454. 4Sum II                                     | https://leetcode.com/problems/4sum-ii/                                    |   —    |   —    |   —   |  —   |   —    |           |
-|  Easy  | 1. Two Sum                                       | https://leetcode.com/problems/two-sum/                                    |   ✅    | 75.0%  |   ✅   |  —   |   ✅    |           |
-|  Easy  | 205. Isomorphic Strings                          | https://leetcode.com/problems/isomorphic-strings/                         |   ✅    | 75.0%  |   ✅   |  —   |   —    |           |
-| Medium | 356. Line Reflection                             | https://leetcode.com/problems/line-reflection/                            |   ✅    | 75.0%  |   —   |  —   |   —    |           |
-| Medium | 2657. Find the Prefix Common Array of Two Arrays | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/ |   ✅    | 62.5%  |   —   |  —   |   —    |           |
-|  Easy  | 349. Intersection of Two Arrays                  | https://leetcode.com/problems/intersection-of-two-arrays/                 |   ✅    | 37.5%  |   —   |  —   |   —    |           |
-|  Easy  | 350. Intersection of Two Arrays II               | https://leetcode.com/problems/intersection-of-two-arrays-ii/              |   ✅    | 37.5%  |   —   |  —   |   —    |           |
-|  Easy  | 387. First Unique Character in a String          | https://leetcode.com/problems/first-unique-character-in-a-string/         |   ✅    | 37.5%  |   —   |  —   |   —    |           |
-|  Easy  | 242. Valid Anagram                               | https://leetcode.com/problems/valid-anagram/                              |   ✅    | 25.0%  |   ✅   |  —   |   —    |           |
-|  Easy  | 771. Jewels and Stones                           | https://leetcode.com/problems/jewels-and-stones/                          |   ✅    | 25.0%  |   —   |  —   |   —    |           |
-|  Easy  | 1496. Path Crossing                              | https://leetcode.com/problems/path-crossing/                              |   ✅    | 25.0%  |   —   |  —   |   —    |           |
-|  Easy  | 2215. Find the Difference of Two Arrays          | https://leetcode.com/problems/find-the-difference-of-two-arrays/          |   ✅    | 25.0%  |   —   |  ✅   |   —    |           |
-|  Easy  | 2956. Find Common Elements Between Two Arrays    | https://leetcode.com/problems/find-common-elements-between-two-arrays/    |   ✅    | 25.0%  |   —   |  —   |   —    |           |
-| Medium | 128. Longest Consecutive Sequence                | https://leetcode.com/problems/longest-consecutive-sequence/               |   —    |   —    |   ✅   |  —   |   ✅    |           |
-|  Easy  | 202. Happy Number                                | https://leetcode.com/problems/happy-number/                               |   —    |   —    |   ✅   |  —   |   —    |           |
-|  Easy  | 219. Contains Duplicate II                       | https://leetcode.com/problems/contains-duplicate-ii/                      |   —    |   —    |   ✅   |  —   |   —    |           |
-|  Easy  | 290. Word Pattern                                | https://leetcode.com/problems/word-pattern/                               |   —    |   —    |   ✅   |  —   |   —    |           |
-|  Easy  | 383. Ransom Note                                 | https://leetcode.com/problems/ransom-note/                                |   —    |   —    |   ✅   |  —   |   —    |           |
-|  Easy  | 1207. Unique Number of Occurrences               | https://leetcode.com/problems/unique-number-of-occurrences/               |   —    |   —    |   —   |  ✅   |   —    |           |
-| Medium | 1657. Determine if Two Strings Are Close         | https://leetcode.com/problems/determine-if-two-strings-are-close/         |   —    |   —    |   —   |  ✅   |   —    |           |
-| Medium | 2352. Equal Row and Column Pairs                 | https://leetcode.com/problems/equal-row-and-column-pairs/                 |   —    |   —    |   —   |  ✅   |   —    |           |
+| Level  | Name                                             | Link                                                                      | Retention |
+|:------:|:-------------------------------------------------|:--------------------------------------------------------------------------|:----------|
+|  Easy  | 706. Design HashMap                              | https://leetcode.com/problems/design-hashmap/                             |           |
+|  Easy  | 136. Single Number                               | https://leetcode.com/problems/single-number/                              |           |
+| Medium | 49. Group Anagrams                               | https://leetcode.com/problems/group-anagrams/                             |           |
+| Medium | 454. 4Sum II                                     | https://leetcode.com/problems/4sum-ii/                                    |           |
+|  Easy  | 1. Two Sum                                       | https://leetcode.com/problems/two-sum/                                    |           |
+|  Easy  | 205. Isomorphic Strings                          | https://leetcode.com/problems/isomorphic-strings/                         |           |
+| Medium | 356. Line Reflection                             | https://leetcode.com/problems/line-reflection/                            |           |
+| Medium | 2657. Find the Prefix Common Array of Two Arrays | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/ |           |
+|  Easy  | 349. Intersection of Two Arrays                  | https://leetcode.com/problems/intersection-of-two-arrays/                 |           |
+|  Easy  | 350. Intersection of Two Arrays II               | https://leetcode.com/problems/intersection-of-two-arrays-ii/              |           |
+|  Easy  | 387. First Unique Character in a String          | https://leetcode.com/problems/first-unique-character-in-a-string/         |           |
+|  Easy  | 242. Valid Anagram                               | https://leetcode.com/problems/valid-anagram/                              |           |
+|  Easy  | 771. Jewels and Stones                           | https://leetcode.com/problems/jewels-and-stones/                          |           |
+|  Easy  | 1496. Path Crossing                              | https://leetcode.com/problems/path-crossing/                              |           |
+|  Easy  | 2215. Find the Difference of Two Arrays          | https://leetcode.com/problems/find-the-difference-of-two-arrays/          |           |
+|  Easy  | 2956. Find Common Elements Between Two Arrays    | https://leetcode.com/problems/find-common-elements-between-two-arrays/    |           |
+| Medium | 128. Longest Consecutive Sequence                | https://leetcode.com/problems/longest-consecutive-sequence/               |           |
+|  Easy  | 202. Happy Number                                | https://leetcode.com/problems/happy-number/                               |           |
+|  Easy  | 219. Contains Duplicate II                       | https://leetcode.com/problems/contains-duplicate-ii/                      |           |
+|  Easy  | 290. Word Pattern                                | https://leetcode.com/problems/word-pattern/                               |           |
+|  Easy  | 383. Ransom Note                                 | https://leetcode.com/problems/ransom-note/                                |           |
+|  Easy  | 1207. Unique Number of Occurrences               | https://leetcode.com/problems/unique-number-of-occurrences/               |           |
+| Medium | 1657. Determine if Two Strings Are Close         | https://leetcode.com/problems/determine-if-two-strings-are-close/         |           |
+| Medium | 2352. Equal Row and Column Pairs                 | https://leetcode.com/problems/equal-row-and-column-pairs/                 |           |
 
 # 6. Stack, Queue
 
@@ -303,21 +374,21 @@ https://leetcode.com/studyplan/leetcode-75/
 
 # 8. Binary Search
 
-| Level  | Name                                                        | Link                                                                                   | Yandex | Freq % | TP150 | LC75 | Top100 | Retention |
-|:------:|:------------------------------------------------------------|:---------------------------------------------------------------------------------------|:------:|:------:|:-----:|:----:|:------:|:----------|
-|  Easy  | 704. Binary Search                                          | https://leetcode.com/problems/binary-search/                                           |   ✅    | 25.0%  |   —   |  —   |   —    | 5         |
-|  Easy  | 35. Search Insert Position                                  | https://leetcode.com/problems/search-insert-position/                                  |   ✅    | 25.0%  |   ✅   |  —   |   ✅    | 3         |
-| Medium | 34. Find First and Last Position of Element in Sorted Array | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ |   —    |   —    |   ✅   |  —   |   ✅    | 2         |
-| Medium | 74. Search a 2D Matrix                                      | https://leetcode.com/problems/search-a-2d-matrix/                                      |   ✅    | 25.0%  |   ✅   |  —   |   ✅    | 3         |
-| Medium | 153. Find Minimum in Rotated Sorted Array                   | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/                    |   ✅    | 37.5%  |   ✅   |  —   |   ✅    | 2         |
-| Medium | 33. Search in Rotated Sorted Array                          | https://leetcode.com/problems/search-in-rotated-sorted-array/                          |   ✅    | 50.0%  |   ✅   |  —   |   ✅    | 2         |
-| Medium | 162. Find Peak Element                                      | https://leetcode.com/problems/find-peak-element/                                       |   —    |   —    |   ✅   |  ✅   |   —    | 2         |
-| Medium | 875. Koko Eating Bananas                                    | https://leetcode.com/problems/koko-eating-bananas/                                     |   —    |   —    |   —   |  ✅   |   —    | 2         |
-| Medium | 658. Find K Closest Elements                                | https://leetcode.com/problems/find-k-closest-elements/                                 |   ✅    | 87.5%  |   —   |  —   |   —    |           |
-|  Hard  | 4. Median of Two Sorted Arrays                              | https://leetcode.com/problems/median-of-two-sorted-arrays/                             |   ✅    | 50.0%  |   ✅   |  —   |   ✅    |           |
-| Medium | 300. Longest Increasing Subsequence                         | https://leetcode.com/problems/longest-increasing-subsequence/                          |   ✅    | 37.5%  |   ✅   |  —   |   ✅    |           |
-|  Easy  | 374. Guess Number Higher or Lower                           | https://leetcode.com/problems/guess-number-higher-or-lower/                            |   —    |   —    |   —   |  ✅   |   —    |           |
-| Medium | 2300. Successful Pairs of Spells and Potions                | https://leetcode.com/problems/successful-pairs-of-spells-and-potions/                  |   —    |   —    |   —   |  ✅   |   —    |           |
+| Level  | Name                                                        | Link                                                                                   | Retention |
+|:------:|:------------------------------------------------------------|:---------------------------------------------------------------------------------------|:----------|
+|  Easy  | 704. Binary Search                                          | https://leetcode.com/problems/binary-search/                                           | 5         |
+|  Easy  | 35. Search Insert Position                                  | https://leetcode.com/problems/search-insert-position/                                  | 3         |
+| Medium | 34. Find First and Last Position of Element in Sorted Array | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ | 2         |
+| Medium | 74. Search a 2D Matrix                                      | https://leetcode.com/problems/search-a-2d-matrix/                                      | 3         |
+| Medium | 153. Find Minimum in Rotated Sorted Array                   | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/                    | 2         |
+| Medium | 33. Search in Rotated Sorted Array                          | https://leetcode.com/problems/search-in-rotated-sorted-array/                          | 2         |
+| Medium | 162. Find Peak Element                                      | https://leetcode.com/problems/find-peak-element/                                       | 2         |
+| Medium | 875. Koko Eating Bananas                                    | https://leetcode.com/problems/koko-eating-bananas/                                     | 2         |
+| Medium | 658. Find K Closest Elements                                | https://leetcode.com/problems/find-k-closest-elements/                                 |           |
+|  Hard  | 4. Median of Two Sorted Arrays                              | https://leetcode.com/problems/median-of-two-sorted-arrays/                             |           |
+| Medium | 300. Longest Increasing Subsequence                         | https://leetcode.com/problems/longest-increasing-subsequence/                          |           |
+|  Easy  | 374. Guess Number Higher or Lower                           | https://leetcode.com/problems/guess-number-higher-or-lower/                            |           |
+| Medium | 2300. Successful Pairs of Spells and Potions                | https://leetcode.com/problems/successful-pairs-of-spells-and-potions/                  |           |
 
 # 9. Intervals
 

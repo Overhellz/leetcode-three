@@ -1,0 +1,31 @@
+class Solution {
+    public String reverseWords(String s) {
+        char[] chars = s.toCharArray();
+        int n = chars.length;
+
+        int slow = 0;
+        int fast = 0;
+
+        while (fast < n) {
+            while(fast < n && chars[fast] == ' ') {
+                fast++;
+            }
+            if (fast == n) {
+                break;
+            }
+
+            if (slow > 0) {
+                chars[slow] = ' ';
+                slow++;
+            }
+            while(fast < n && char[fast] != ' ') {
+                chars[slow] = chars[fast];
+                slow++;
+                fast++;
+            }
+        }
+
+
+
+    }
+}

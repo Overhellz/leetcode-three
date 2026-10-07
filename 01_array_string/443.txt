@@ -1,0 +1,27 @@
+class Solution {
+
+    // решить через 2 указателя
+    public int compress(char[] chars) {
+        char current = chars[0];
+        int count = 1;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 1; i < chars.length; i++) {
+            if (chars[i] != chars[i-1]) {
+                sb.append(current);
+                if (count != 1) {
+                    sb.append(count);
+                }
+                current = chars[i];
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+        sb.append(current);
+        if (count != 1) {
+            sb.append(count);
+        }
+
+        return sb.toString().length();
+    }
+}
